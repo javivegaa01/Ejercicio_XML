@@ -1,6 +1,6 @@
 from lxml import etree
 from funciones import *
-
+from tabulate import tabulate
 doc=etree.parse("fut.xml")
 
 print("Bienvenido al programa")
@@ -23,7 +23,13 @@ while True:
     if opcion==6:
         break
     elif opcion==1:
-        print(Listar_Informacion(doc))
-
+        print("--------------CLASIFICACIÓN DE LA LIGA--------------")
+        print("      Equipo           Puntos       Diferencia de goles")
+        for a in range(len(Listar_Informacion(doc))):
+            lista_mostrar=[]
+            lista_mostrar=(Listar_Informacion(doc)[a].split(" "))
+            for b in range(len(lista_mostrar)):
+                print(lista_mostrar[b].center(20," "),lista_mostrar[b+1].center(10," "),lista_mostrar[b+2].center(18," "))
+            print(lista_mostrar)
 print()
 print("Fin del programa")
