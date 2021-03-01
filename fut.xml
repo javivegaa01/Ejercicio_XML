@@ -466,7 +466,7 @@
 		                        </estadistica>
 		                        <estadistica>
                                     <nombre>Remates</nombre>
-	                                    valor>7</valor>
+	                                    <valor>7</valor>
 		                        </estadistica>
 		                        <estadistica>
                                     <nombre>Remates a Puerta</nombre>
@@ -935,7 +935,7 @@
                         <goals_conceded>6</goals_conceded>
                     </team>
                     <team>
-                        <name>Athletic*</name>
+                        <name>Athletic</name>
                         <rank>15</rank>
                         <points>7</points>
                         <played>6</played>
