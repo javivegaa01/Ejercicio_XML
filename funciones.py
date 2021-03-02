@@ -9,3 +9,8 @@ def Listar_Informacion(datos):
         diferencia=int(elem3)-int(elem4)
         equipos.append(elem1+" "+elem2+" "+str(diferencia))
     return equipos
+
+def Contar_Informacion(datos):
+    nombres=datos.xpath('//clasificacion/team/name/text()')
+    num_equipos=len(nombres)
+    return num_equipos

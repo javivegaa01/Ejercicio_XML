@@ -29,6 +29,8 @@ while True:
             lista.append(Listar_Informacion(doc)[a].split(" "))
             for b in range(len(lista)):
                 print(tabulate(lista, headers=['Equipo','Puntos','Diferencia de goles'],tablefmt='grid'))
+    elif opcion==2:
+        print("En la liga hay %i equipos" % Contar_Informacion(doc))
 print()
 print("Fin del programa")
  
