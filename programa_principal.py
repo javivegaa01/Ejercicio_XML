@@ -45,7 +45,14 @@ while True:
             print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s eventos" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
         else:
             print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s evento" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
-
+    elif opcion==5:
+        print()
+        e1=input("Equipo local: ")
+        e2=input("Equipo visitante: ")
+        print()
+        for elem in Ejercicio_libre(e1,e2,doc):
+            print("Resultado:  ",elem)
+        print()
 print()
 print("Fin del programa")
  

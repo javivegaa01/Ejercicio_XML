@@ -28,3 +28,13 @@ def Buscar_informacion_relacionada(posicion,datos):
     apariaciones=0
     apariaciones=local.count(nombre)+visitante.count(nombre)
     return nombre,apariaciones
+
+def Ejercicio_libre(equipo1,equipo2,datos):
+    res_loc=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/resultadolocal/text()"%(equipo1,equipo2))
+    res_vis=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/resultadovisitante/text()"%(equipo1,equipo2))
+    resultado=[]
+    for elem1,elem2 in zip(res_loc,res_vis):
+        resultado.append(elem1+" - "+elem2)
+    return resultado
+
+#Funciones para validar datos de entrada
