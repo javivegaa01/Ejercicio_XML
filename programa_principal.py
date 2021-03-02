@@ -23,13 +23,12 @@ while True:
     if opcion==6:
         break
     elif opcion==1:
-        print("--------------CLASIFICACIÓN DE LA LIGA--------------")
-        print("      Equipo           Puntos       Diferencia de goles")
+        print("------------CLASIFICACIÓN DE LA LIGA--------------")
         for a in range(len(Listar_Informacion(doc))):
-            lista_mostrar=[]
-            lista_mostrar=(Listar_Informacion(doc)[a].split(" "))
-            for b in range(len(lista_mostrar)):
-                print(lista_mostrar[b].center(20," "),lista_mostrar[b+1].center(10," "),lista_mostrar[b+2].center(18," "))
-            print(lista_mostrar)
+            lista=[]
+            lista.append(Listar_Informacion(doc)[a].split(" "))
+            for b in range(len(lista)):
+                print(tabulate(lista, headers=['Equipo','Puntos','Diferencia de goles'],tablefmt='grid'))
 print()
 print("Fin del programa")
+ 
