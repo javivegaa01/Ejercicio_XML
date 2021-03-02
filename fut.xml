@@ -227,6 +227,116 @@
 	                        </equipoVisitante>
                         </estadisticas>
                     </evento>
+                    <evento id="51068678">
+                        <hora>20:15</hora>
+                        <estado id="3">Finalizado</estado>
+                        <equipolocal id="109">Getafe</equipolocal>
+                        <equipovisitante id="1982">R.Madrid</equipovisitante>
+                        <resultadolocal>0</resultadolocal>
+                        <resultadovisitante>3</resultadovisitante>
+                        <estadisticas>
+                        	<equipoLocal>		
+		                        <estadistica>
+		                            <nombre>Nombre</nombre>
+		                            <valor>Getafe</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Posesión</nombre>
+		                            <valor>40</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Remates</nombre>
+		                            <valor>4</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Remates a Puerta</nombre>
+		                            <valor>2</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Tiros al palo</nombre>
+		                            <valor>1</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Córners a Favor</nombre>
+		                            <valor>5</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Intervenciones del Portero</nombre>
+		                            <valor>5</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Balones Perdidos</nombre>
+		                            <valor>168</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Balones Recuperados</nombre>
+		                            <valor>67</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Faltas Cometidas</nombre>
+		                            <valor>20</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Tarjetas Amarillas</nombre>
+		                            <valor>3</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Tarjetas Rojas</nombre>
+		                            <valor>2</valor>
+		                        </estadistica>
+	                        </equipoLocal>
+	                        <equipoVisitante>		
+		                        <estadistica>
+		                            <nombre>Nombre</nombre>
+		                            <valor>R.Madrid</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Posesión</nombre>
+		                            <valor>60</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Remates</nombre>
+		                            <valor>20</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Remates a Puerta</nombre>
+		                            <valor>16</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Tiros al palo</nombre>
+		                            <valor>4</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Córners a Favor</nombre>
+		                            <valor>18</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Intervenciones del Portero</nombre>
+		                            <valor>3</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Balones Perdidos</nombre>
+		                            <valor>26</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Balones Recuperados</nombre>
+		                            <valor>76</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Faltas Cometidas</nombre>
+		                            <valor>9</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Tarjetas Amarillas</nombre>
+		                            <valor>1</valor>
+		                        </estadistica>
+		                        <estadistica>
+		                            <nombre>Tarjetas Rojas</nombre>
+		                            <valor>0</valor>
+		                        </estadistica>
+	                        </equipoVisitante>
+                        </estadisticas>
+                    </evento>
                     <evento id="510671">
                         <hora>18:15</hora>
                         <estado id="3">Finalizado</estado>

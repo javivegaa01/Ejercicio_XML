@@ -41,7 +41,11 @@ while True:
             print(elem)
     elif opcion==4:
         p=input("Introduce una posicion de la tabla: ")
-        print(Buscar_informacion_relacionada(p,doc))
+        if int(Buscar_informacion_relacionada(p,doc)[1])>1:
+            print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s eventos" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
+        else:
+            print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s evento" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
+
 print()
 print("Fin del programa")
  
