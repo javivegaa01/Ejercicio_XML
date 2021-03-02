@@ -14,3 +14,12 @@ def Contar_Informacion(datos):
     nombres=datos.xpath('//clasificacion/team/name/text()')
     num_equipos=len(nombres)
     return num_equipos
+
+def Buscar_informacion(equipo,datos):
+    nombres=datos.xpath('//clasificacion/team/name/text()')
+    goles_marcados=datos.xpath('//clasificacion/team/goals_scored/text()')
+    equipos=[]
+    for elem1,elem2 in zip(nombres,goles_marcados):
+        equipos.append(elem1)
+        equipos.append(elem2)
+    return equipos
