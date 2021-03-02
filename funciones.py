@@ -33,8 +33,15 @@ def Ejercicio_libre(equipo1,equipo2,datos):
     res_loc=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/resultadolocal/text()"%(equipo1,equipo2))
     res_vis=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/resultadovisitante/text()"%(equipo1,equipo2))
     resultado=[]
+    posesion_local=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoLocal/estadistica[nombre/text()='Posesión']/valor/text()"%(equipo1,equipo2))
+    posesion_visitante=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoVisitante/estadistica[nombre/text()='Posesión']/valor/text()"%(equipo1,equipo2))
+    remates_local=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoLocal/estadistica[nombre/text()='Remates']/valor/text()"%(equipo1,equipo2))
+    remates_visitante=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoVisitante/estadistica[nombre/text()='Remates']/valor/text()"%(equipo1,equipo2))
+    remates_a_puerta_local=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoLocal/estadistica[nombre/text()='Remates a Puerta']/valor/text()"%(equipo1,equipo2))
+    remates_a_puerta_visitante=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoVisitante/estadistica[nombre/text()='Remates a Puerta']/valor/text()"%(equipo1,equipo2))
+    faltas_cometidas_local=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoLocal/estadistica[nombre/text()='Faltas Cometidas']/valor/text()"%(equipo1,equipo2))
+    faltas_cometidas_visitante=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoVisitante/estadistica[nombre/text()='Faltas Cometidas']/valor/text()"%(equipo1,equipo2))
     for elem1,elem2 in zip(res_loc,res_vis):
         resultado.append(elem1+" - "+elem2)
     return resultado
-
 #Funciones para validar datos de entrada

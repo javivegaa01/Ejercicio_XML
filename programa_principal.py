@@ -49,10 +49,10 @@ while True:
         print()
         e1=input("Equipo local: ")
         e2=input("Equipo visitante: ")
-        print()
-        for elem in Ejercicio_libre(e1,e2,doc):
-            print("Resultado:  ",elem)
-        print()
+        if len(Ejercicio_libre(e1,e2,doc)[0])<1:
+            print("Ese partido aún no se ha jugado")
+
+        
 print()
 print("Fin del programa")
  
