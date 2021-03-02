@@ -51,6 +51,17 @@ while True:
         e2=input("Equipo visitante: ")
         if len(Ejercicio_libre(e1,e2,doc)[0])<1:
             print("Ese partido aún no se ha jugado")
+        else:
+            for elem in Ejercicio_libre(e1,e2,doc)[0]:
+                res=elem
+            print("RESULTADO: %s" % res)
+            print()
+            print("-----------ESTADISTICAS-----------")
+            print("Local                    Visitante")
+            print(" %s         Posesion          %s" % (Ejercicio_libre(e1,e2,doc)[1]["Local"],Ejercicio_libre(e1,e2,doc)[1]["Visitante"]))
+            print(" %s         Remates           %s" % (Ejercicio_libre(e1,e2,doc)[2]["Local"],Ejercicio_libre(e1,e2,doc)[2]["Visitante"]))
+            print(" %s         A puerta           %s" % (Ejercicio_libre(e1,e2,doc)[2]["Local a puerta"],Ejercicio_libre(e1,e2,doc)[2]["Visitante a puerta"]))
+
 
         
 print()

@@ -43,5 +43,22 @@ def Ejercicio_libre(equipo1,equipo2,datos):
     faltas_cometidas_visitante=datos.xpath("//eventos/evento[equipolocal/text()='%s' and equipovisitante/text()='%s']/estadisticas/equipoVisitante/estadistica[nombre/text()='Faltas Cometidas']/valor/text()"%(equipo1,equipo2))
     for elem1,elem2 in zip(res_loc,res_vis):
         resultado.append(elem1+" - "+elem2)
-    return resultado
+        if elem1>elem2:
+            ind_resultado=True
+    posesion={}
+    remates={}
+    faltas={}
+    for elem1,elem2,elem3,elem4,elem5,elem6,elem7,elem8 in zip(posesion_local,posesion_visitante,remates_local,remates_visitante,remates_a_puerta_local,remates_a_puerta_visitante,faltas_cometidas_local,faltas_cometidas_visitante):
+        posesion["Local"]=elem1
+        posesion["Visitante"]=elem2
+        remates["Local"]=elem3
+        remates["Local a puerta"]=elem5
+        remates["Visitante"]=elem4
+        remates["Visitante a puerta"]=elem6
+        remates["Local"]=elem7
+        remates["Visitante"]=elem8
+    return resultado,posesion,remates,faltas
+
+
+
 #Funciones para validar datos de entrada
