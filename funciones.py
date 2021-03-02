@@ -55,8 +55,8 @@ def Ejercicio_libre(equipo1,equipo2,datos):
         remates["Local a puerta"]=elem5
         remates["Visitante"]=elem4
         remates["Visitante a puerta"]=elem6
-        remates["Local"]=elem7
-        remates["Visitante"]=elem8
+        faltas["Local"]=elem7
+        faltas["Visitante"]=elem8
     return resultado,posesion,remates,faltas
 
 

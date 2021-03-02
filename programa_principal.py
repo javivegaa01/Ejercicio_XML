@@ -57,11 +57,27 @@ while True:
             print("RESULTADO: %s" % res)
             print()
             print("-----------ESTADISTICAS-----------")
-            print("Local                    Visitante")
-            print(" %s         Posesion          %s" % (Ejercicio_libre(e1,e2,doc)[1]["Local"],Ejercicio_libre(e1,e2,doc)[1]["Visitante"]))
-            print(" %s         Remates           %s" % (Ejercicio_libre(e1,e2,doc)[2]["Local"],Ejercicio_libre(e1,e2,doc)[2]["Visitante"]))
-            print(" %s         A puerta           %s" % (Ejercicio_libre(e1,e2,doc)[2]["Local a puerta"],Ejercicio_libre(e1,e2,doc)[2]["Visitante a puerta"]))
-
+            print("%s                         %s" % (e1,e2))
+            print("%s         Posesion             %s" % (Ejercicio_libre(e1,e2,doc)[1]["Local"],Ejercicio_libre(e1,e2,doc)[1]["Visitante"]))
+            print("%s         Remates              %s" % (Ejercicio_libre(e1,e2,doc)[2]["Local"],Ejercicio_libre(e1,e2,doc)[2]["Visitante"]))
+            print("%s         A puerta             %s" % (Ejercicio_libre(e1,e2,doc)[2]["Local a puerta"],Ejercicio_libre(e1,e2,doc)[2]["Visitante a puerta"]))
+            print("%s          Faltas              %s" % (Ejercicio_libre(e1,e2,doc)[3]["Local"],Ejercicio_libre(e1,e2,doc)[3]["Visitante"]))
+            print("----------------------------------")
+            if Ejercicio_libre(e1,e2,doc)[1]["Local"]>Ejercicio_libre(e1,e2,doc)[1]["Visitante"]:
+                if (int(Ejercicio_libre(e1,e2,doc)[1]["Local"])-int(Ejercicio_libre(e1,e2,doc)[1]["Visitante"]))>=20:
+                    print("%s ha dado una lección de futbol y ha dominado completamente el partido" % e1)
+                else:
+                    print("La posesión ha estado repartida entre los dos equipos")
+            else:
+                if (int(Ejercicio_libre(e1,e2,doc)[1]["Visitante"])-int(Ejercicio_libre(e1,e2,doc)[1]["Local"]))>=20:
+                    print("%s ha dado una lección de futbol y ha dominado completamente el partido" % e2)
+                else:
+                    print("La posesión ha estado repartida entre los dos equipos")
+            if Ejercicio_libre(e1,e2,doc)[2]["Local a puerta"]>Ejercicio_libre(e1,e2,doc)[2]["Visitante a puerta"]:
+                print("%s ha tenido más efectividad que %s" % (e1,e2))
+            else:
+                print("%s ha tenido más efectividad que %s" % (e2,e1))
+            
 
         
 print()
