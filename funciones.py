@@ -16,10 +16,9 @@ def Contar_Informacion(datos):
     return num_equipos
 
 def Buscar_informacion(equipo,datos):
-    nombres=datos.xpath('//clasificacion/team/name/text()')
-    goles_marcados=datos.xpath('//clasificacion/team/goals_scored/text()')
-    equipos=[]
-    for elem1,elem2 in zip(nombres,goles_marcados):
-        equipos.append(elem1)
-        equipos.append(elem2)
-    return equipos
+    goles_marcados=datos.xpath("//clasificacion/team[name/text()='%s']/goals_scored/text()"%equipo)
+    return goles_marcados
+
+def Buscar_informacion_relacionada(posicion,datos):
+    nombre=datos.xpath("//clasificacion/team[rank/text()='%s']/name/text()"%posicion)
+    return nombre

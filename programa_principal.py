@@ -37,12 +37,11 @@ while True:
         print()
     elif opcion==3:
         e=input("Introduce un equipo: ")
-        for a in range(len(Buscar_informacion(e,doc))):
-            if e==Buscar_informacion(e,doc)[a]:
-                sol=int(Buscar_informacion(e,doc)[a+1])
-        print()
-        print("%s ha marcado %i goles." %(e,sol))
-        print()
+        for elem in Buscar_informacion(e,doc):
+            print(elem)
+    elif opcion==4:
+        p=input("Introduce una posicion de la tabla: ")
+        print(Buscar_informacion_relacionada(p,doc))
 print()
 print("Fin del programa")
  
