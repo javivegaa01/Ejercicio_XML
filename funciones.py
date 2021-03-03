@@ -62,3 +62,9 @@ def Ejercicio_libre(equipo1,equipo2,datos):
 
 
 #Funciones para validar datos de entrada
+def existe_el_equipo(equipo,datos):
+    nombres=datos.xpath("//clasificacion/team/name/text()")
+    ind=False
+    if nombres.count(equipo)>0:
+        ind=True
+    return ind
