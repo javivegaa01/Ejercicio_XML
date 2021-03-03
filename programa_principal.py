@@ -45,10 +45,13 @@ while True:
             print("Goles marcados: %s " % g )
     elif opcion==4:
         p=input("Introduce una posicion de la tabla: ")
-        if int(Buscar_informacion_relacionada(p,doc)[1])>1:
-            print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s eventos" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
+        if exite_la_posicion(Contar_Informacion(doc),doc)==False:
+            print("La posicion es erronea o está fuera del rango")
         else:
-            print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s evento" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
+            if int(Buscar_informacion_relacionada(p,doc)[1])>1:
+                print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s eventos" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
+            else:
+                print("El equipo que se encuentra en la posicion %s es %s y ha participado en %s evento" % (p,Buscar_informacion_relacionada(p,doc)[0],Buscar_informacion_relacionada(p,doc)[1]))
     elif opcion==5:
         print()
         e1=input("Equipo local: ")
@@ -87,7 +90,6 @@ while True:
             else:
                 print("%s ha tenido más efectividad que %s." % (e2,e1))
                 ind_tiros=True
-
             print()
             print("Conclusión")
             if ind_posesion==True and ind_tiros==False and (int(Ejercicio_libre(e1,e2,doc)[0][0][0:1])>int(Ejercicio_libre(e1,e2,doc)[0][0][4])):

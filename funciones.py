@@ -68,3 +68,10 @@ def existe_el_equipo(equipo,datos):
     if nombres.count(equipo)>0:
         ind=True
     return ind
+
+def exite_la_posicion(num,datos):
+    posiciones=datos.xpath("//clasificacion/team/rank/text()")
+    ind=False
+    if num==len(posiciones):
+        ind=True
+    return ind
